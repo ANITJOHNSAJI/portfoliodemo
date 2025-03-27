@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Portfolio</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+	function toggleMenu() {
+		const menu = document.querySelector(".navbar ul");
+		menu.classList.toggle("show");
+	}
+</script>
+
+<body>
+	<div class="container">
+		<nav class="navbar">
+			<div class="logo">ANIT JOHN SAJI</div>
+			<div class="hamburger" id="hamburger-icon">
+				<div class="menu-icon" onclick="toggleMenu()">
+					☰
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#resume">Resume</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+	<section id="home">
+		<div class="content">
+			<h1 class="display-2">Hello! I'm <span class="text-primary">Anit John Saji</span></h1>
+			<h2 class="lead">Python FullStack Web Developer</h2>
+			<button><a href="#projects">My work</a></button>
+			<button><a href="#contact">Contact me</a></button>
+		</div>
+
+	</section>
+
+	
+	<section id="about" class="py-5">
+		<div class="container py-5">
+			<h2 class="section-title text-center" data-aos="fade-up">About Me</h2>
+			<div class="row align-items-center">
+				<!-- Left: Image -->
+				<div class="col-lg-5 text-center" data-aos="fade-right">
+					<img src="images/pfimg.jpg" 
+						 alt="Anit John Saji"
+						 class="img-fluid rounded shadow-lg" >
+                         <!-- {{ url_for('static', filename='images/1720680789232_D-867 (1).jpg') }} -->
+				</div>
+				
+				<!-- Right: Text Content -->
+				<div class="col-lg-7" data-aos="fade-left">
+					<h3 class="fw-bold">Hello! I'm Anit John Saji</h3><br>
+					<p class="lead">         A passionate Python Full Stack Web Developer with experience
+						in building dynamic, scalable, and efficient web applications. I specialize in crafting
+						end-to-end web solutions, from designing seamless frontends to building powerful backend
+						systems.</p>
+				</div>
+		</div>
+	</section>
+	<section id="resume">
+		<div class="resume-section">
+			<h2>My Resume</h2>
+
+
+			<div class="download-button">
+				<a href="/view_resume">
+					<button>View My Resume</button>
+				</a>
+			</div>
+		</div>
+	</section>
+	<section id="projects">
+		<div class="projects-container">
+			<h2>My Work</h2><br><br>
+			<div class="project-grid">
+				<div class="project">
+					<a href="https://github.com/ANITJOHNSAJI/WATCHCART.git" target="_blank">
+						<img src="{{ url_for('static', filename='images/logo.png') }}" alt="Project 1"
+							class="project-image">
+					</a>
+					<h1>E-Commerce</h1>
+					<p>Project 1</p>
+				</div>
+				<div class="project">
+					<a href="https://github.com/ANITJOHNSAJI/Chempakam.git" target="_blank">
+						<img src="{{ url_for('static', filename='images/bms-removebg-preview.png') }}" alt="Project 1"
+							class="project-image1">
+					</a>
+					<h1>chempakam clone</h1>
+					<p>Project 2</p>
+				</div>
+				<div class="project">
+					<a href="https://github.com/ANITJOHNSAJI/odin-project.git" target="_blank">
+						<img src="{{ url_for('static', filename='images/apple-xxl.png') }}" alt="Project 1"
+							class="project-image">
+					</a>
+					<h1>odin project clone</h1>
+					<p>Project 3</p>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+	<section id="contact">
+		<div class="container1">
+			<div class="form-section">
+				<h2>Contact Me</h2>
+				<form action="/submit" method="post">
+					<input type="text" name="name" placeholder="Your Name" required>
+					<input type="email" name="email" placeholder="Your Email" required>
+					<input type="text" name="subject" placeholder="Subject">
+					<textarea name="message" rows="5" placeholder="Message" required></textarea>
+					<button type="submit">Send Message</button>
+				</form>
+			</div>
+		</div>
+	</section>
+	<section id="footer" class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<p>&copy; 2025 Anit John Saji. All Rights Reserved.</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/anitjohnsaji" target="_blank" class="social-icon">LinkedIn</a>
+					<a href="https://github.com/ANITJOHNSAJI" target="_blank" class="social-icon">GitHub</a>
+					<a href="mailto:anitjohnsaji41@gmail.com" target="_blank" class="social-icon">Email</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>
