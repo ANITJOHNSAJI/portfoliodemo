@@ -75,18 +75,32 @@ p {
 }
 
 /* 🌟 About Section */
+/* 🌟 About Section */
+#about .about-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
 #about img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    display: block;
-    margin: 20px auto;
+    border-radius: 0%; /* Removed the circle effect */
     box-shadow: 0px 0px 10px rgba(0, 170, 255, 0.5);
     transition: transform 0.3s ease-in-out;
 }
 
 #about img:hover {
     transform: scale(1.1);
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 600px; /* Set a max width for better readability */
 }
 
 /* 🌟 Skills */
