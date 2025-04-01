@@ -80,15 +80,15 @@ p {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+    gap: 40px; /* Increased gap to move text further right */
     text-align: left;
 }
 
 #about img {
-    width: 150px;
-    height: 150px;
-    border-radius: 0%; /* Removed the circle effect */
-    box-shadow: 0px 0px 10px rgba(0, 170, 255, 0.5);
+    width: 400px; /* Increased image size */
+    height: 400px;
+    border-radius: 10px; /* Optional: slight rounding for aesthetics */
+    box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.6);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -100,8 +100,10 @@ p {
     font-size: 1.2rem;
     line-height: 1.6;
     opacity: 0.9;
-    max-width: 600px; /* Set a max width for better readability */
+    max-width: 650px;
+  /* Slightly increased for better readability */
 }
+
 
 /* 🌟 Skills */
 .skills-list {
