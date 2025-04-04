@@ -5,29 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anit John Saji - Portfolio</title>
-    <link rel="stylesheet" href="/portfoliodemo/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
 
-    <!-- ✅ Navigation Bar -->
+    <!--  Navigation Bar -->
     <nav class="navbar">
         <div class="logo">ANIT JOHN SAJI</div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Education</a></li>
-            <li><a href="#work"> Works</a></li>
+            <li><a href="#work">Works</a></li>
             <li><a href="#resume">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-   <!-- ✅ About Section -->
+   <!--  About Section -->
 <section id="about" class="section">
     <h1>About Me</h1>
     <div class="about-content">
-        <img src="/images/pfimg.jpg" alt="ANIT JOHN SAJI">
+        <img src="{{ url_for('static', filename='images/pfimg.jpg') }}" alt="ANIT JOHN SAJI">
+        
         <p>
             Hi, I'm <strong>Anit John Saji</strong>, a passionate <strong>Python Full Stack Web Developer</strong> currently pursuing
             a course in Python Full Stack Web Development. I love building responsive, user-friendly web applications using modern web technologies.
@@ -35,19 +36,19 @@
     </div>
 </section>
 
-    <!-- ✅ Skills Section -->
+    <!--  Skills Section -->
     <section id="skills" class="section">
         <h2>Skills</h2>
         <ul class="skills-list">
             <li>Python (Django, Flask)</li>
             <li>Frontend: HTML, CSS, JavaScript, Bootstrap</li>
             <li>REST API Development</li>
-			<li>Database: MySQL,sqlite3</li>
-			<li>Version Control: Git</li>
+            <li>Database: MySQL, sqlite3</li>
+            <li>Version Control: Git</li>
         </ul>
     </section>
 
-    <!-- ✅ Education Section -->
+    <!--  Education Section -->
     <section id="education" class="section">
         <h2>Education</h2>
         <ul>
@@ -57,7 +58,7 @@
         </ul>
     </section>
 
-   <!-- ✅ Work Section -->
+   <!--  Work Section -->
 <section id="work" class="section">
     <h2>My Works</h2>
     <p>Here are some of my recent projects:</p><br>
@@ -65,42 +66,38 @@
     <div class="work-container">
         <!-- Project 1: E-Commerce Website -->
         <div class="work-card">
-            <!-- <img src="/portfoliodemo/images/project1.jpg" alt="E-Commerce Website"> -->
+            <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="E-Commerce Website">
             <h3>E-Commerce Website</h3>
-            <p>A full-stack e-commerce platform built with Django,HTML,CSS,Bootstrap,JavaScript and sqlite3.</p>
-            <a href="https://your-ecommerce-demo.com" target="_blank" class="btn">Live Demo</a>
+            <p>A full-stack e-commerce platform built with Django, HTML, CSS, Bootstrap, JavaScript and sqlite3.</p>
             <a href="https://github.com/ANITJOHNSAJI/WATCHCART" target="_blank" class="btn github-btn">GitHub</a>
-        </div><br>
+        </div><br><br>
 
         <!-- Project 2: Odin Project Clone -->
         <div class="work-card">
-            <!-- <img src="/images/odinproject.png" alt="Odin Project Clone"> -->
             <h3>Odin Project Clone</h3>
             <p>A complete clone of The Odin Project, built with HTML, CSS, and Bootstrap.</p>
             <a href="https://anitjohnsaji.github.io/odin-project/" target="_blank" class="btn">Live Demo</a>
             <a href="https://github.com/ANITJOHNSAJI/odin-project" target="_blank" class="btn github-btn">GitHub</a>
-        </div><br>
+        </div><br><br>
 
         <!-- Project 3: Chempakam Boutique Clone -->
         <div class="work-card">
-            <!-- <img src="/portfoliodemo/images/project3.jpg" alt="Chempakam Boutique Clone"> -->
             <h3>Chempakam Boutique Clone</h3>
             <p>A fully responsive boutique website clone using HTML & CSS.</p>
             <a href="https://anitjohnsaji.github.io/Chempakam/home.html" target="_blank" class="btn">Live Demo</a>
             <a href="https://github.com/ANITJOHNSAJI/chempakam" target="_blank" class="btn github-btn">GitHub</a>
-        </div><br>
-          <!-- Project 4: Gallery vault-->
-          <div class="work-card">
-            <!-- <img src="/portfoliodemo/images/project3.jpg" alt="Chempakam Boutique Clone"> -->
-            <h3>Gallery vault</h3>
-            <p>A minor project using Django,HTML,CSS and MySQL</p>
-            <a href="https://your-chempakam-demo.com" target="_blank" class="btn">Live Demo</a>
+        </div><br><br>
+        
+        <!-- Project 4: Gallery vault-->
+        <div class="work-card">
+            <h3>Gallery Vault</h3>
+            <p>A minor project using Django, HTML, CSS and MySQL</p>
             <a href="https://github.com/ANITJOHNSAJI/gallery" target="_blank" class="btn github-btn">GitHub</a>
         </div>
     </div>
 </section>
 
-    <!-- ✅ Resume Section -->
+    <!--  Resume Section -->
     <section id="resume" class="section">
         <h2>My Resume</h2>
         <p>
@@ -111,7 +108,7 @@
         <p>
             I am a <strong>Python Full Stack Web Developer</strong> skilled in developing responsive and scalable web applications.
             My expertise includes <strong>Python, Django, Flask, REST API, HTML, CSS, JavaScript, and Bootstrap</strong>.
-        </p><br>
+        </p>
 
         <h3>Work Experience</h3>
         <ul>
@@ -119,15 +116,21 @@
             <li>Designed and integrated REST APIs for seamless data exchange.</li>
             <li>Built responsive front-end applications using Bootstrap and JavaScript.</li>
             <li>Collaborated with teams to deliver high-quality software solutions.</li>
-        </ul><br><br>
+        </ul>
 
-        <h3>Resume </h3>
-        <a href="/images/Copy of White Pastel Green Minimalist Business CV Resume (1).pdf" class="btn" >View My Resume</a>
+        <h3>Resume</h3>
+        <a href="{{ url_for('static', filename='images/resume.pdf') }}" class="btn" target="_blank">View My Resume</a>
     </section>
 
-    <!-- ✅ Contact Section -->
+    <!--  Contact Section -->
     <section id="contact" class="section">
         <h2>Contact Me</h2>
+        {% if success %}
+        <div class="alert success">Your message has been sent successfully! I'll get back to you soon.</div>
+        {% endif %}
+        {% if error %}
+        <div class="alert error">There was a problem sending your message. Please try again later.</div>
+        {% endif %}
         <form action="/submit" method="post" class="contact-form">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
@@ -136,8 +139,8 @@
         </form>
     </section>
 
-    <!-- ✅ Footer -->
-    <footer class="footer">https://your-chempakam-demo.com
+    <!--  Footer -->
+    <footer class="footer">
         <p>&copy; 2025 Anit John Saji. All Rights Reserved.</p>
     </footer>
 
