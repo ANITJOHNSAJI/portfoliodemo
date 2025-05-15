@@ -5,123 +5,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anit John Saji - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
-
-    <!--  Navigation Bar -->
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="logo">ANIT JOHN SAJI</div>
         <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#work">Works</a></li>
-            <li><a href="#resume">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-   <!--  About Section -->
-<section id="about" class="section">
-    <h1>About Me</h1>
-    <div class="about-content">
-        <img src="{{ url_for('static', filename='images/pfimg.jpg') }}" alt="ANIT JOHN SAJI">
-        
-        <p>
-            Hi, I'm <strong>Anit John Saji</strong>, a passionate <strong>Python Full Stack Web Developer</strong> currently pursuing
-            a course in Python Full Stack Web Development. I love building responsive, user-friendly web applications using modern web technologies.
-        </p>
-    </div>
-</section>
+    <!-- Home Section -->
+    <section id="home" class="section home-section">
+        <div class="home-content">
+            <h3>Hello, I am</h3>
+            <h1>Anit John Saji</h1>
+            <h2>Python Full Stack Web Developer</h2>
+            <div class="social-links">
+                <a href="https://wa.me/+918547104693" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://github.com/ANITJOHNSAJI" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://mail.google.com/mail/u/0/?ogbl#inbox" class="social-icon"><i class="fas fa-envelope"></i></a>
+                <a href="https://profile.indeed.com/?hl=en_IN&co=IN&from=gnav-jobseeker-profile--profile-one-frontend" class="social-icon"><i class="fas fa-briefcase"></i></a>
+                <a href="https://www.linkedin.com/in/anit-john-saji-3988a4275/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="{{ url_for('static', filename='images/resume.pdf') }}" class="btn resume-btn" target="_blank">View My Resume</a>
+        </div>
+    </section>
 
-    <!--  Skills Section -->
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h1>About Me</h1>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    Hi, I'm <strong>Anit John Saji</strong>, a passionate <strong>Python Full Stack Web Developer</strong> currently pursuing a course in Python Full Stack Web Development. I love building responsive, user-friendly web applications using modern web technologies. With a strong foundation in <strong>Python, Django, Flask, HTML, CSS, JavaScript, and Bootstrap</strong>, I specialize in creating seamless, scalable solutions that enhance user experiences.<br><br>
+                    Beyond technical skills, I value collaboration and continuous learning. I actively explore new tools and frameworks to stay updated with industry trends, and I enjoy working in teams to bring ideas to life. My goal is to create impactful web solutions that not only meet client needs but also push the boundaries of what's possible in web development. Let's connect and build something amazing together!
+                </p>
+            </div>
+            <img src="{{ url_for('static', filename='images/pfimg.jpg') }}" alt="ANIT JOHN SAJI">
+        </div>
+    </section>
+
+    <!-- Skills Section -->
     <section id="skills" class="section">
         <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>Python (Django, Flask)</li>
-            <li>Frontend: HTML, CSS, JavaScript, Bootstrap</li>
-            <li>REST API Development</li>
-            <li>Database: MySQL, sqlite3</li>
-            <li>Version Control: Git</li>
+        <!-- First Row: 7 Skills -->
+        <ul class="skills-row">
+            <li>
+                <i class="fab fa-python skill-icon"></i>
+                <span>Python</span>
+            </li>
+            <li>
+                <i class="fab fa-python skill-icon"></i>
+                <span>Django</span>
+            </li>
+            <li>
+                <i class="fab fa-python skill-icon"></i>
+                <span>Flask</span>
+            </li>
+            <li>
+                <i class="fab fa-html5 skill-icon"></i>
+                <span>HTML</span>
+            </li>
+            <li>
+                <i class="fab fa-css3-alt skill-icon"></i>
+                <span>CSS</span>
+            </li>
+            <li>
+                <i class="fab fa-react skill-icon"></i>
+                <span>React</span>
+            </li>
+            <li>
+                <i class="fab fa-bootstrap skill-icon"></i>
+                <span>Bootstrap</span>
+            </li>
+        </ul>
+        <!-- Second Row: 6 Skills -->
+        <ul class="skills-row">
+            <li>
+                <i class="fab fa-git-alt skill-icon"></i>
+                <span>Git</span>
+            </li>
+            <li>
+                <i class="fab fa-js skill-icon"></i>
+                <span>JS</span>
+            </li>
+            <li>
+                <i class="fas fa-database skill-icon"></i>
+                <span>MySQL</span>
+            </li>
+            <li>
+                <i class="fas fa-database skill-icon"></i>
+                <span>SQLite</span>
+            </li>
+            <li>
+                <i class="fas fa-code skill-icon"></i>
+                <span>RESTAPI</span>
+            </li>
+            <li>
+                <i class="fas fa-window-maximize skill-icon"></i>
+                <span>Tkinter</span>
+            </li>
         </ul>
     </section>
 
-    <!--  Education Section -->
+    <!-- Education Section -->
     <section id="education" class="section">
         <h2>Education</h2>
-        <ul>
-            <li><strong>Diploma in Computer Engineering</strong> - MPTC MATTAKKARA (2021 - 2024)</li>
-            <li><strong>Higher Secondary</strong> - MT Seminary Kottayam (2019 - 2021)</li>
-            <li><strong>Secondary School Education</strong> - Holy Cross HSS Thellakom (2019)</li>
-        </ul>
-    </section>
-
-   <!--  Work Section -->
-<section id="work" class="section">
-    <h2>My Works</h2>
-    <p>Here are some of my recent projects:</p><br>
-
-    <div class="work-container">
-        <!-- Project 1: E-Commerce Website -->
-        <div class="work-card">
-            <h3>E-Commerce Website</h3>
-            <p>A full-stack e-commerce platform built with Django, HTML, CSS, Bootstrap, JavaScript and sqlite3.</p>
-            <a href="https://github.com/ANITJOHNSAJI/WATCHCART" target="_blank" class="btn github-btn">GitHub</a>
-        </div><br><br>
-
-        <!-- Project 2: Odin Project Clone -->
-        <div class="work-card">
-            <h3>Odin Project Clone</h3>
-            <p>A complete clone of The Odin Project, built with HTML, CSS, and Bootstrap.</p>
-            <a href="https://anitjohnsaji.github.io/odin-project/" target="_blank" class="btn">Live Demo</a>
-            <a href="https://github.com/ANITJOHNSAJI/odin-project" target="_blank" class="btn github-btn">GitHub</a>
-        </div><br><br>
-
-        <!-- Project 3: Chempakam Boutique Clone -->
-        <div class="work-card">
-            <h3>Chempakam Boutique Clone</h3>
-            <p>A fully responsive boutique website clone using HTML & CSS.</p>
-            <a href="https://anitjohnsaji.github.io/Chempakam/home.html" target="_blank" class="btn">Live Demo</a>
-            <a href="https://github.com/ANITJOHNSAJI/chempakam" target="_blank" class="btn github-btn">GitHub</a>
-        </div><br><br>
-        
-        <!-- Project 4: Gallery vault-->
-        <div class="work-card">
-            <h3>Gallery Vault</h3>
-            <p>A minor project using Django, HTML, CSS and MySQL</p>
-            <a href="https://github.com/ANITJOHNSAJI/gallery" target="_blank" class="btn github-btn">GitHub</a>
+        <div class="education-container">
+            <!-- Card 1: Diploma -->
+            <div class="education-card">
+                <h3>Diploma in Computer Engineering</h3>
+                <p>MPTC MATTAKKARA</p>
+                <p>2021 - 2024</p>
+            </div>
+            <!-- Card 2: Higher Secondary -->
+            <div class="education-card">
+                <h3>Higher Secondary</h3>
+                <p>MT Seminary Kottayam</p>
+                <p>2019 - 2021</p>
+            </div>
+            <!-- Card 3: Secondary School -->
+            <div class="education-card">
+                <h3>Secondary School Education</h3>
+                <p>Holy Cross HSS Thellakom</p>
+                <p>2019</p>
+            </div>
         </div>
-    </div>
-</section>
-
-    <!--  Resume Section -->
-    <section id="resume" class="section">
-        <h2>My Resume</h2>
-        <p>
-            Below is a brief overview of my professional journey and expertise.
-        </p>
-
-        <h3>Professional Summary</h3>
-        <p>
-            I am a <strong>Python Full Stack Web Developer</strong> skilled in developing responsive and scalable web applications.
-            My expertise includes <strong>Python, Django, Flask, REST API, HTML, CSS, JavaScript, and Bootstrap</strong>.
-        </p><br>
-
-        <h3>Work Experience</h3>
-        <ul>
-            <li>Developed dynamic web applications using Python and Django.</li>
-            <li>Designed and integrated REST APIs for seamless data exchange.</li>
-            <li>Built responsive front-end applications using Bootstrap and JavaScript.</li>
-            <li>Collaborated with teams to deliver high-quality software solutions.</li>
-        </ul><br>
-
-        <h3>Resume</h3>
-        <a href="{{ url_for('static', filename='images/resume.pdf') }}" class="btn" target="_blank">View My Resume</a>
     </section>
 
-    <!--  Contact Section -->
+    <!-- Work Section -->
+    <section id="work" class="section">
+        <h2>My Works</h2>
+        <p>Here are some of my recent projects:</p>
+        <div class="work-container">
+            <!-- Project 1: E-Commerce Website -->
+            <div class="work-card">
+                <img src="../static/images/dd.jpeg" alt="E-Commerce Website" class="work-image">
+                <div class="work-content">
+                    <h3>E-Commerce Website</h3>
+                    <p>A full-stack e-commerce platform built with Django, HTML, CSS, Bootstrap, JavaScript and sqlite3.</p>
+                    <a href="https://github.com/ANITJOHNSAJI/WATCHCART" target="_blank" class="btn github-btn">GitHub</a>
+                </div>
+            </div>
+            <!-- Project 2: Odin Project Clone -->
+            <div class="work-card">
+                <img src="../static/images/bb.png" alt="Odin Project Clone" class="work-image">
+                <div class="work-content">
+                    <h3>Odin Project Clone</h3>
+                    <p>A complete clone of The Odin Project, built with HTML, CSS, and Bootstrap.</p>
+                    <div class="button-group">
+                        <a href="https://anitjohnsaji.github.io/odin-project/" target="_blank" class="btn">Live Demo</a>
+                        <a href="https://github.com/ANITJOHNSAJI/odin-project" target="_blank" class="btn github-btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3: Chempakam Boutique Clone -->
+            <div class="work-card">
+                <img src="../static/images/cc.png" alt="Chempakam Boutique Clone" class="work-image">
+                <div class="work-content">
+                    <h3>Chempakam Boutique Clone</h3>
+                    <p>A fully responsive boutique website clone using HTML & CSS.</p>
+                    <div class="button-group">
+                        <a href="https://anitjohnsaji.github.io/Chempakam/home.html" target="_blank" class="btn">Live Demo</a>
+                        <a href="https://github.com/ANITJOHNSAJI/chempakam" target="_blank" class="btn github-btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 4: Gallery Vault -->
+            <div class="work-card">
+                <img src="../static/images/100-photo-mosaic.jpg" alt="Gallery Vault" class="work-image">
+                <div class="work-content">
+                    <h3>Gallery Vault</h3>
+                    <p>A minor project using Django, HTML, CSS and MySQL.</p>
+                    <a href="https://github.com/ANITJOHNSAJI/gallery" target="_blank" class="btn github-btn">GitHub</a>
+                </div>
+            </div>
+            <!-- Project 5: Career Guidance -->
+            <div class="work-card">
+                <img src="../static/images/aa.png" alt="Career Guidance" class="work-image">
+                <div class="work-content">
+                    <h3>Career Guidance</h3>
+                    <p>A full-stack e-commerce platform built with Django, HTML, CSS, Bootstrap, JavaScript and sqlite3.</p>
+                    <a href="https://github.com/ANITJOHNSAJI/career_guidance.git" target="_blank" class="btn github-btn">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="section">
         <h2>Contact Me</h2>
         {% if success %}
@@ -138,9 +219,9 @@
         </form>
     </section>
 
-    <!--  Footer -->
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Anit John Saji. All Rights Reserved.</p>
+        <p>© 2025 Anit John Saji. All Rights Reserved.</p>
     </footer>
 
 </body>
